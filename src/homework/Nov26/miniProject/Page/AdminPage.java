@@ -9,7 +9,8 @@ public class AdminPage extends Page {
 	
 	@Override
 	public void show() {
-		System.out.println("a: Add product\nb: Delete product\nc: Back");
+		System.out.println("=========== Admin Mode ===========");
+		System.out.println("a. Add product\nb. Delete product\nc. Back");
 		String input = State.getState().getScanner().next();
 		switch (input) {
 			case "a": {

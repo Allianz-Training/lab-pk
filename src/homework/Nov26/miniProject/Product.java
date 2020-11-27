@@ -3,10 +3,10 @@ package homework.Nov26.miniProject;
 public class Product{
 	private int id;
 	private String title;
-	private double price;
+	private long price;
 //	private int amount;
 	
-	public Product(Integer id, String title, double price) {
+	public Product(Integer id, String title, long price) {
 		this.id = id;
 		this.title = title;
 		this.price = price;
@@ -21,7 +21,7 @@ public class Product{
 		return title;
 	}
 
-	public double getPrice() {
+	public long getPrice() {
 		return price;
 	}
 	

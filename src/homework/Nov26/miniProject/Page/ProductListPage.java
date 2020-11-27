@@ -18,8 +18,7 @@ public class ProductListPage extends Page {
 		
 		switch (input) {
 			case "b": {
-				Page previousPage = (Page) State.getState().getStack().pop();
-				previousPage.show();
+				((Page) State.getState().getStack().pop()).show();
 				break;
 			}
 			case "c": {

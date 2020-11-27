@@ -1,9 +1,10 @@
 package homework.Nov26.miniProject;
 
+import homework.Nov26.miniProject.Abstract.Page;
+
 import java.util.Scanner;
 import java.util.Stack;
 
-import lab.Nov26.miniProject.Abstract.Page;
 
 public class State {
 	private static State singleton = null;

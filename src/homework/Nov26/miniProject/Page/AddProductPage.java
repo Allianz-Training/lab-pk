@@ -17,19 +17,18 @@ public class AddProductPage extends Page {
 		products.showProducts();
 		
 		Scanner scanner = State.getState().getScanner();
-		int id = products.getSize()-1;
+		int id = products.getSize()+1;
 		
 		System.out.print("Please enter product name: ");
 		String title = scanner.next();
 			
 		System.out.print("Please enter product price: ");
-		double price = scanner.nextInt();
+		long price = scanner.nextLong();
 		
 		Product newProduct = new Product(id, title, price);
 		products.addProduct(newProduct);
 		products.showProducts();
-		Page previousPage = (Page) State.getState().getStack().pop();
-		previousPage.show();
+		((Page) State.getState().getStack().pop()).show();
 	}
 	
 }

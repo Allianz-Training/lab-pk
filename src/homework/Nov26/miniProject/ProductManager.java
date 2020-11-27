@@ -1,13 +1,13 @@
 package homework.Nov26.miniProject;
 
+import homework.Nov26.miniProject.Interface.IManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import lab.Nov26.miniProject.Interface.IManager;
-
 public class ProductManager implements IManager {
 	
-	private List<Product> products;
+	private final List<Product> products;
 	
 	public ProductManager() {
 		products = new ArrayList<>();
@@ -34,6 +34,8 @@ public class ProductManager implements IManager {
 	public void showProducts() {
 		if(products.isEmpty()) {
 			System.out.println("Empty List");
+		} else {
+			System.out.println("=========== Product List ===========");
 		}
 		for(Product product: products) {
 			System.out.println(product);

@@ -1,5 +1,6 @@
 package homework.Nov26.miniProject.Page;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,23 +17,25 @@ public class CheckoutPage extends Page {
 	
 	@Override
 	public void show() {
+		System.out.println("=========== Checkout ===========");
 		Cart cart = State.getState().getShoppingCart();
 		ProductManager products = State.getState().getProductManager();
 		cart.showProducts();
-		System.out.println("Type product Id to delete, b: back,  c: checkout");
-		String input = State.getState().getScanner().next();
+		System.out.println("Type product Id to delete\nb. back\nc. confirm");
+		String input = State.getState().getScanner().nextLine();
 		
 		switch (input) {
 			case "b": {
-				Page previousPage = (Page) State.getState().getStack().pop();
-				previousPage.show();
+				((Page) State.getState().getStack().pop()).show();
 				break;
 			}
 			case "c": {
-				System.out.println("Please enter address: ");
-				String address = State.getState().getScanner().next();
-				State.getState().getScanner().close();
-				confirm(address);
+				if(!cart.getShoppingCart().isEmpty()) {
+					System.out.println("Please enter address: ");
+					String address = State.getState().getScanner().nextLine();
+					State.getState().getScanner().close();
+					confirm(address);
+				}
 				System.out.println("Thank you");
 				break;
 			}
@@ -55,15 +58,11 @@ public class CheckoutPage extends Page {
 	private void confirm(String address) {
 		try {
 		      File file = new File("src/address.txt");
-		      FileWriter writer = null;
-		      if (file.createNewFile()) {
-		    	  writer = new FileWriter(file.getName());
-		      } 
-		      else {
-		    	  writer = new FileWriter(file.getName());
-		      }
-		      writer.write(address + "\n");
-		      writer.close();
+		      FileWriter writer = new FileWriter(file, true);
+		      BufferedWriter bw = new BufferedWriter(writer);
+		      bw.write(address);
+		      bw.newLine();
+		      bw.close();
 	    } catch (IOException e) {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();

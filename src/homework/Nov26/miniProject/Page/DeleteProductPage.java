@@ -30,7 +30,6 @@ public class DeleteProductPage extends Page {
 					} else {
 						System.out.println("Id not found, Please try again");
 					}
-					show();
 				}
 				show();
 				break;

@@ -5,8 +5,8 @@ import java.util.HashMap;
 import homework.Nov26.miniProject.Interface.IManager;
 
 public class Cart implements IManager {
-	private HashMap<Product, Integer> shoppingCart = new HashMap<>();
-	private double totalPrice;
+	private final HashMap<Product, Integer> shoppingCart = new HashMap<>();
+	private long totalPrice;
 	
 	public Cart() {
 		totalPrice = 0;
@@ -22,7 +22,7 @@ public class Cart implements IManager {
 		shoppingCart.computeIfPresent(product, (k, v) -> v + 1);
 	}
 	
-	public double getTotalPrice() {
+	public long getTotalPrice() {
 		totalPrice = 0;
 		shoppingCart.forEach((k, v) -> {
 			totalPrice += k.getPrice() * v;

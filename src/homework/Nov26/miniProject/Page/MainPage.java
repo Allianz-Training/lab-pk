@@ -9,6 +9,7 @@ public class MainPage extends Page {
 
 	@Override
 	public void show() {
+//		State.getState().getStack().clear();
 		System.out.println("What do you want to do ?");
 		System.out.println("a. " + "Buy products");
 		System.out.println("b. " + "Manage products");

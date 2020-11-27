@@ -1,6 +1,6 @@
 package homework.Nov26.miniProject;
 
-import lab.Nov26.miniProject.Page.MainPage;
+import homework.Nov26.miniProject.Page.MainPage;
 
 public class MyApp {
 	
