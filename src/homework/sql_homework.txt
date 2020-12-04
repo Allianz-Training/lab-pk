@@ -1,0 +1,9 @@
+1. SELECT sname, age from Sailors;
+
+2. SELECT DISTINCT Sailors.sname from Sailors INNER JOIN Reserves on Sailors.sid = Reserves.sid WHERE Reserves.bid = 103; 
+
+3. SELECT DISTINCT Reserves.sid from Reserves INNER JOIN Boats on Reserves.bid = Boats.bid where Boats.color = "Red";
+
+4. SELECT sname from Sailors INNER JOIN Reserves On Reserves.sid = Sailors.sid INNER JOIN Boats on Reserves.bid = Boats.bid where Boats.color = "Red";
+
+5. SELECT color from Sailors INNER JOIN Reserves On Reserves.sid = Sailors.sid INNER JOIN Boats on Reserves.bid = Boats.bid where Sailors.sname = "Lubber";
