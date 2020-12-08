@@ -1,0 +1,11 @@
+var text;
+text = 'Hello';
+console.log(text.length);
+console.log(text.charAt(0));
+console.log(text[0]);
+console.log(text.concat(' World'));
+console.log('========== Lab 1 =========');
+console.log('microsoft excel'.toLocaleUpperCase());
+console.log('GOOGLE AND APPLE'.toLocaleLowerCase());
+var hello = 'hello world';
+console.log("H" + hello.slice(1, 6) + 'W' + hello.slice(7));
