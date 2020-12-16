@@ -1,0 +1,26 @@
+div {
+    margin: 6.5rem;
+}
+.search-input {
+    position: relative;
+    z-index: 2;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+input {
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 3px 3px 0 rgba(33,30,32,.2);
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+    border: 1px solid #b91e25;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-left: 20px;
+}
+
+input:focus-visible {
+    outline: none !important;
+}

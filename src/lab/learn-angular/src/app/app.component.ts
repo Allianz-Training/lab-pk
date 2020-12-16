@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { BackendService } from './backend.service';
 import { ProductListComponent } from './product/product-list/product-list.component';
 
 @Component({
@@ -6,17 +7,17 @@ import { ProductListComponent } from './product/product-list/product-list.compon
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'learn-angular';
 
   @ViewChild('productList')
   productList: ProductListComponent
 
-  constructor() {}
+  constructor(private backendService: BackendService) {}
 
   ngAfterViewInit(): void {
-    this.productList.products.push({name: 'ส้มโอ', price: 111})
-    this.productList.products.push({name: 'แตงโม', price: 222})
-    this.productList.products.push({name: 'มะพร้่าวน้ำหอม', price: 333})
+    this.productList.products = this.backendService.getProducts()
   }
+
+  ngOnInit(): void {}
 }

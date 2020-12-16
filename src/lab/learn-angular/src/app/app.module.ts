@@ -18,6 +18,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductItemComponent } from './product/product-item/product-item.component';
 import { PanelComponent } from './panel/panel.component';
+import { BackendService } from './backend.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { PanelComponent } from './panel/panel.component';
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

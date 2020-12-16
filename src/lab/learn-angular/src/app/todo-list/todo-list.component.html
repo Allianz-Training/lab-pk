@@ -1,0 +1,13 @@
+<h2>My Task Today</h2>
+<ul>
+    <li *ngFor="let item of toDoItems; index as i">
+        <p> {{ item }} 
+            <button (click)="deleteItem(i)">Del</button>
+        </p>
+    </li>
+</ul>
+<span>
+    <b>Task: </b> 
+    <input [(ngModel)]="toDoItem">
+    <button (click)="addItem()">Add</button>
+</span>

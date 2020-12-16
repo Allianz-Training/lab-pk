@@ -1,0 +1,38 @@
+
+img {
+    max-width: 171px;
+    max-height: 40px;
+    margin: 1.5rem 0 0 2rem;
+}
+
+p, h3{
+    color: whitesmoke;
+    margin-left: 10.5rem;
+    margin-right: 10.5rem;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    margin-left: 10.5rem;
+    margin-right: 10.5rem;
+}
+
+.banner {
+    background-image: url('https://www.swiftviews.com/auth-background.d98d7ff313fe2ec07d45.png');
+    height: 29rem;
+    box-shadow: 0 1px 6px 0 rgba(50,50,50,.8);
+}
+
+button {
+    color: orangered;
+    border-radius: 5px;
+    min-width: 185px;
+    min-height: 50px;
+    border-style: none;
+    box-shadow: 0 1px 5px 1px rgba(50,50,50,.35);
+}
