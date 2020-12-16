@@ -1,0 +1,28 @@
+<app-task *ngFor="let task of toDoList"
+[task]='task'
+(onSelected)="deletedTask($event)"
+(onClick)="showTask($event)"
+>
+</app-task>
+
+<div class="add-task-box">
+    <div class="task-box">
+        <h3> Add task </h3>
+        <div>
+            Name: 
+            <input [(ngModel)]='name' >
+        </div>
+        <div>
+            Description:
+            <input [(ngModel)]='description' >
+        </div>
+        <div>
+            <button (click)="addTask()">Add</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="task" class="task">
+    <h3> Task: {{ task.name }} </h3> 
+    {{ task.description }}
+</div>

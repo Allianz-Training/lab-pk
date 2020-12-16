@@ -1,0 +1,12 @@
+.add-task-box {
+    border: 2px solid grey;
+    margin: 2rem 0 1rem 0;
+}
+
+.task-box {
+    margin: 0 0 2rem 1rem;
+}
+
+.task {
+    margin-bottom: 2rem;
+}

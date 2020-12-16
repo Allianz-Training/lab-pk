@@ -1,0 +1,14 @@
+.task {
+    border: 1px solid grey;
+}
+
+.task:hover {
+    background-color: hotpink;
+}
+
+span {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80%;
+    margin-left: 2rem;
+}
