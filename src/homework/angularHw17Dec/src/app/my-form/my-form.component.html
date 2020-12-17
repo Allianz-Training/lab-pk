@@ -1,0 +1,29 @@
+<div class="container">
+    <h2> Form </h2>
+    <form [formGroup]="form" class="form-content">
+        <div>
+            <label for="name" class="form-label">Name         
+                <span style="color: red;" *ngIf="form.get('name').errors?.required">*</span>
+            </label>
+            <input formControlName="name" class="form-control" placeholder="Your answer">
+        </div>
+        <div>
+            <label for="email" class="form-label">Email
+                <span style="color: red;" *ngIf="form.get('email').errors?.required">*</span>
+                <span style="color: red;" *ngIf="form.get('email').errors?.email">Email is invalid</span>
+            </label>
+            <input formControlName="email" class="form-control" placeholder="Your answer">
+        </div>
+        <div>
+            <label for="postalAddress" class="form-label">Postal Address
+                <span style="color: red;" *ngIf="form.get('postalAddress').errors?.required">*</span>
+            </label>
+            <input formControlName="postalAddress" class="form-control" placeholder="Your answer">
+        </div>
+        <div>
+            <label for="comment" class="form-label">Comment</label>
+            <input formControlName="comment" class="form-control" placeholder="Your answer">
+        </div>
+        <button class="btn btn-primary" [disabled]="form.invalid" (click)="submit()" >Submit</button>
+    </form>
+</div>

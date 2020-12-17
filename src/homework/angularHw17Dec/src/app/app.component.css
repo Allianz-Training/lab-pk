@@ -1,0 +1,9 @@
+.content {
+    background-color: seagreen;
+    min-height: 500px;
+}
+
+.form {
+    z-index: 20;
+    margin-top: 2rem;
+}
