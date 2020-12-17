@@ -13,11 +13,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   @ViewChild('productList')
   productList: ProductListComponent
 
-  constructor(private backendService: BackendService) {}
-
-  ngAfterViewInit(): void {
-    this.productList.products = this.backendService.getProducts()
-  }
+  ngAfterViewInit(): void {}
 
   ngOnInit(): void {}
 }

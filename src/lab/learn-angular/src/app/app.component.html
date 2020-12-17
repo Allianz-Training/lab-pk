@@ -1,10 +1,11 @@
-<app-h3-top-banner></app-h3-top-banner>
 <div class="exercise">
-    <h2>Product List</h2>
-    <app-product-list #productList></app-product-list>
-    <app-home-component title="home component"></app-home-component>
-    <app-todo-list></app-todo-list>
-    <app-home></app-home>
-    <app-counting></app-counting>
-    <app-lab4-component></app-lab4-component>
+    <nav>
+        <a routerLink="/">Homework 2</a>
+        <a routerLink="/hw1">Homework 1</a>
+        <a routerLink="/lab4">Lab 4</a>
+        <a routerLink="/toDoList">To do list</a>
+        <a routerLink="/products">Products</a>
+        <a routerLink="/counting">Lab 3</a>
+    </nav>
+    <router-outlet></router-outlet>
 </div>
